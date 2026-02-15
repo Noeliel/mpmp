@@ -1,0 +1,6 @@
+[workspace]
+resolver = "3"
+members = ["client", "server", "common", "mpv", "api"]
+
+#panic = "immediate-abort"
+# cargo +nightly-2026-02-06 build --release -Z build-std=std,panic_abort --target x86_64-unknown-linux-gnu

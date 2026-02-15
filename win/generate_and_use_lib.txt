@@ -1,0 +1,6 @@
+def contains symbol dump generated with winedump
+
+llvm-lib /def:mpv-2.def /out:mpv.lib /machine:X64
+
+extend RUSTFLAGS env var:
+RUSTFLAGS="[...] -Lnative=path/to/lib -lmpv" cargo build [...]

@@ -1,0 +1,14 @@
+[package]
+name = "mpv"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+name = "mpmpv"
+crate-type = ["dylib"]
+
+[dependencies]
+client = { path = "../client" }
+
+[build-dependencies]
+bindgen = "0.72.1"
