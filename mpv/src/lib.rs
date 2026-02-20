@@ -83,8 +83,7 @@ fn inner_main(mpv: *mut mpv_handle) -> Result<(), ()> {
                     {
                         let desired_pos = desired_state.get_time_pos();
                         if client.is_some()
-                            && (desired_pos - mpv.get_time_pos().unwrap_or(desired_pos)).abs()
-                                > 0.25
+                            && (desired_pos - mpv.get_time_pos().unwrap_or(desired_pos)).abs() > 0.4
                         {
                             mpv.display("[mpmp] Desync detected, adjusting...");
                             (skip_seek_sync, skip_pause_sync, skip_speed_sync) =
